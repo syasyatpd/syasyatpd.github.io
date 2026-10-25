@@ -407,12 +407,15 @@ nav ul li a:hover::after {
 .cv-container {
     margin-top: 20px; /* Atur besar kecilnya jarak sesuai keinginan */
     display: flex;
-    justify-content: flex-end; /* Membuat posisi ke sebelah kanan mentok */
+    justify-content: flex-end; 
+    width: 100%;/* Membuat posisi ke sebelah kanan mentok */
 }
 
 /* Mengatur agar tombol tidak terlalu lebar (mengikuti ukuran teks) */
 .btn-cv {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     width: auto; /* Lebar tombol menyesuaikan isi */
     padding: 10px 20px; /* Atur ketebalan dan panjang tombol */
     background-color: #007bff; /* Ganti warna latar tombol sesuai tema Anda */
