@@ -403,32 +403,40 @@ nav ul li a:hover::after {
     border: none;
     cursor: pointer;
 }
-/* Memberikan jarak dengan teks/elemen di atasnya */
-.cv-container {
-    margin-top: 20px; /* Atur besar kecilnya jarak sesuai keinginan */
+/* Mengatur tata letak foto dan teks berdampingan */
+.about-container {
     display: flex;
-    justify-content: flex-end; 
-    width: 100%;/* Membuat posisi ke sebelah kanan mentok */
+    align-items: center; /* Menyelaraskan posisi vertikal */
+    gap: 40px; /* Jarak antara foto dan teks */
 }
 
-/* Mengatur agar tombol tidak terlalu lebar (mengikuti ukuran teks) */
+/* Memastikan area teks memuat paragraf dan tombol dengan rapi */
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Membuat teks dan tombol rata kiri (sejajar dengan awal teks) */
+}
+
+/* Mengatur container tombol agar posisinya pas di bawah teks */
+.cv-button-container {
+    margin-top: 20px; /* Jarak antara paragraf terakhir dengan tombol */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Ubah ke 'flex-end' jika ingin tombolnya rata kanan mentok ke batas kanan teks */
+}
+
+/* Gaya tombol */
 .btn-cv {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    width: auto; /* Lebar tombol menyesuaikan isi */
-    padding: 10px 20px; /* Atur ketebalan dan panjang tombol */
-    background-color: #007bff; /* Ganti warna latar tombol sesuai tema Anda */
-    color: #ffffff; /* Warna teks */
+    padding: 10px 20px;
+    background-color: #007bff; /* Sesuaikan warna tema Anda */
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px; /* Membuat sudut tombol sedikit melengkung */
-    transition: background 0.3s ease;
+    border-radius: 5px;
+    width: auto; /* Tombol tidak melebar penuh, hanya pas seukuran teks */
 }
-
-.btn-cv:hover {
-    background-color: #0056b3; /* Warna tombol saat kursor diarahkan */
-}
-
 /* --- 8. Footer --- */
 footer {
     background: var(--primary-color);
